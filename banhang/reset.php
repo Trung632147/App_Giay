@@ -9,7 +9,7 @@
   require 'PHPMailer/src/PHPMailer.php';
   require 'PHPMailer/src/SMTP.php';
 
-  $email = $_POST['email']; // "trung26302@gmail.com"
+  $email = $_POST['email']; // "abc@gmail.com"
   $query = 'SELECT * FROM `user` WHERE `email` = "'.$email.'"';
   $data = mysqli_query($conn, $query);
   $result = array();
@@ -28,7 +28,7 @@
   		$email=($result[0]["email"]);
       $pass=($result[0]["password"]);
 
-    $link="<a href='http://192.168.1.199/banhang/reset_pass.php?key=".$email."&reset=".$pass."'>Click To Reset password</a>";
+    $link="<a href='http://192.168.1.166/banhang/reset_pass.php?key=".$email."&reset=".$pass."'>Click To Reset password</a>";
     
     $mail = new PHPMailer();
     $mail->CharSet =  "utf-8";
@@ -36,9 +36,9 @@
     // enable SMTP authentication
     $mail->SMTPAuth = true;                  
     // GMAIL username
-    $mail->Username = "tr90642@gmail.com";
+    $mail->Username = "abc@gmail.com";
     // GMAIL password
-    $mail->Password = "llqu qvkl lxtt qzer";
+    $mail->Password = "";
     $mail->SMTPSecure = "ssl";  
     // sets GMAIL as the SMTP server
     $mail->Host = "smtp.gmail.com";
