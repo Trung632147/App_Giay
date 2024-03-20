@@ -12,7 +12,7 @@ public interface ApiPushNotification {
     @Headers(
             {
                     "Content-Type: application/json",
-                    "Authorization: key=AAAAbUH3uGI:APA91bHM6cNSpx5aTrV4jjhP56NC0S_JpdjL06i0kaXo2b5pXoDSrGTiYacGNT0uddcUM-cNbE9M8yPXXkzzwOAJLU_hX5TqDuXbUycju4B9jRNAYFJCQD4jC-7J9IFGrBpd0eTdoC_l"
+                    "Authorization: key= "
             }
     )
     @POST("fcm/send")
